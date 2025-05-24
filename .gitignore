@@ -1,0 +1,9 @@
+
+/.env
+*/.env
+
+/.idea/.gitignore
+/.idea/ai.iml
+/.idea/modules.xml
+/.idea/php.xml
+/.idea/vcs.xml

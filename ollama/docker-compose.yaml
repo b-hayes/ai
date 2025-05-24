@@ -1,0 +1,17 @@
+services:
+  Ollama:
+    image: ollama/ollama:latest
+    container_name: Ollama
+    volumes:
+      - ${CONFIG_ROOT}/ollama/config:/root/.ollama/config
+      - ${FAST_CACHE}/ollama/models:/root/.ollama/models
+    ports:
+      - "11434:11434"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped

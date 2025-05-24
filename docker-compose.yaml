@@ -1,0 +1,19 @@
+services:
+
+  OpenWebUI:
+    extends:
+      file: open-web-ui/docker-compose.yaml
+      service: OpenWebUI
+    env_file:
+      - open-web-ui/.env
+
+  Ollama:
+    extends:
+      file: ollama/docker-compose.yaml
+      service: Ollama
+    env_file:
+      - ollama/.env
+
+networks:
+  default:
+    name: ai
