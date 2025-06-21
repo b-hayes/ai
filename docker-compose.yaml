@@ -7,12 +7,12 @@ services:
     env_file:
       - open-web-ui/.env
 
-  Ollama:
-    extends:
-      file: ollama/docker-compose.yaml
-      service: Ollama
-    env_file:
-      - ollama/.env
+#  Ollama:
+#    extends:
+#      file: ollama/docker-compose.yaml
+#      service: Ollama
+#    env_file:
+#      - ollama/.env
 
 networks:
   default:
